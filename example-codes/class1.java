@@ -56,7 +56,9 @@ public class MyClass1 {
             // b ? x : y
             int a = 3;
             int b = 5;
-            int m = a > b ? a : b;
+            int m = a > b ? a : b;  // 
+            // abs??
+
             int score = 70;
             char grade = score >= 90 ? 'A' : (score >= 60 ? 'B' : 'C');
             score = 91;
@@ -109,6 +111,7 @@ public class MyClass1 {
 
         if(false)
         {
+            System.out.println("===part 6===");
             System.out.print("1 ");
             System.out.print("2 ");
             System.out.print("3 ");
@@ -119,6 +122,7 @@ public class MyClass1 {
 
         if(false)
         {
+            System.out.println("===part 7===");
             Scanner scanner = new Scanner(System.in);
             if(scanner.hasNext())
             {
@@ -151,6 +155,7 @@ public class MyClass1 {
 
         if(false)
         {
+            System.out.println("===part 8===");
             System.out.print("for:");
             for(int i=0; i<3; i++)
             {
@@ -177,7 +182,8 @@ public class MyClass1 {
             System.out.println();
         }
 
-        if(true){
+        if(false){
+            System.out.println("===part 9===");
             int option = 2;
             switch (option) {
                 case 1:

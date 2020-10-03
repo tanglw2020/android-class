@@ -33,6 +33,14 @@ backgroundColor: #fff
 + 漫长的启动时间
 
 ---
+# 实例操作
+
+# 在Android Studio中开发普通Java
+1. 在已有的Android项目app右键，选择New > Module
+2. 选择Module Type 为 Java or Kotlin Library
+
+
+---
 # Java程序结构
 ```
 /**
@@ -60,6 +68,11 @@ public class Hello {
 + 习惯以小写字母开头
 
 ---
+# 数据类型分类
+- 基本数据类型
+- 引用数据类型
+
+---
 # 基本数据类型
 ![数据类型和字节数](./medias/datatype-bytes.png)
 
@@ -71,28 +84,26 @@ int: -2147483648 ~ 2147483647
 long: -9223372036854775808 ~ 9223372036854775807
 
 ---
+# 布尔类型
+- 布尔类型boolean只有true和false两个值。
+- Java语言对布尔类型的存储并没有做规定，因为理论上存储布尔类型只需要1 bit，但是通常JVM内部会把boolean表示为4字节整数。
+
+---
 # 浮点数
 + 浮点数常常无法精确表示
 >> 比较两个浮点数是否相等常常会出现错误的结果
-
++ 浮点数比较时用差的绝对值
 + 参与运算的两个数其中一个是整型，那么整型可以自动提升到浮点型
 + 整数运算在除数为0时会报错，而浮点数运算在除数为0时，不会报错
 
----
-# 布尔类型
-布尔类型boolean只有true和false两个值。
-Java语言对布尔类型的存储并没有做规定，因为理论上存储布尔类型只需要1 bit，但是通常JVM内部会把boolean表示为4字节整数。
 
 ---
 # 三元运算
+语法： cond ? x : y
+
 问题： 分数大于90属于A级，60-80分属于B级，低于60分属于C级。用三元运算如何实现？
 
----
-# 实例操作
 
-# 在Android Studio中开发普通Java
-1. 在已有的Android项目app右键，选择New > Module
-2. 选择Module Type 为 Java or Kotlin Library
 
 ---
 # 引用类型

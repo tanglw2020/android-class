@@ -57,7 +57,7 @@ Person ming = new Person();
 ming.name = "ming";
 ming.age = 12;
 ```
-必须使用new
+**必须使用new**
 
 
 ---
@@ -119,16 +119,15 @@ class Person {
 - 便于功能升级
 
 ---
-# 静态变量
+# 静态类型
+##  静态变量
 - class普通字段叫实例字段，每个实例中占有不同的空间。
 - class中用static修饰的字段叫静态字段，所有实例同享同一段空间。
 - 建议只用className.fieldName访问静态字段。
 
-
----
-# 静态方法
+## 静态方法
 - 和上面一样，用static修饰的方法叫静态方法。
-- 通过类名就可调用，也建议这么使用。
+- 通过类名就可调用。
 - 静态方法内部，无法访问this变量，也无法访问实例字段，它只能访问静态字段。
 - 常用于工具类方法如Arrays.sort()、Math.acos()
 
@@ -150,11 +149,11 @@ String类提供了多个重载方法indexOf()查找子串：
 ---
 # 重载规则
 - 被重载的方法必须在同一个类中；
-- 被重载的方法必须改变参数列表(参数个数或类型不一样)；
+- 被重载的方法必须改变参数列表(**参数个数或类型**不一样)；
 - 被重载的方法可以改变返回类型；
 - 被重载的方法可以改变访问修饰符；
 - 被重载的方法可以声明新的或更广的检查异常；
-- 无法以返回值类型作为重载函数的区分标准.
+- 无法以**返回值类型**作为重载函数的区分标准.
 
 
 ---
@@ -186,7 +185,6 @@ class Student {
 class Student extends Person {
     // 不要重复name和age字段/方法,
     // 只需要定义新增score字段/方法:
-
     private int score;
     public int getScore() { … }
     public void setScore(int score) { … }
@@ -199,7 +197,7 @@ class Student extends Person {
 - Person称为超类（super class），父类（parent class），基类（base class）-- Student称为子类（subclass），扩展类（extended class）
 
 ---
-# 继承树
+# 继承关系
 Student --》 Person --》 Object
 > 除了Object，每个类都父类
 
@@ -242,17 +240,6 @@ Student s2 = (Student) p2; // runtime error! ClassCastException!
 因为p2的实际类型是Person，不能把父类变为子类，因为子类功能比父类多，多的功能无法凭空变出来。
 
 ---
-# 预先判断 instanceof
-
-```java
-Person p = new Student();
-if (p instanceof Student) {
-    // 只有判断成功才会向下转型:
-    Student s = (Student) p; // 一定会成功
-}
-```
-
----
 # 多态
 - 多态:针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法
 - 作用：同一类指针，实现不同功能
@@ -284,7 +271,6 @@ interface DataBaseManagement {
 - 明确地定义了方法的名称，参数，和返回值
 - 没有任何实现过程的规范
 - 使用implements关键字实现接口
-
 
 ---
 # 包 package
